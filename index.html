@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FramerBot - AI Framer Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-robot"></i>
+        <h1>FramerBot</h1>
+      </div>
+      <p>Generate perfect Framer code components instantly</p>
+    </header>
+
+    <div id="chat" class="chat-container">
+      <div class="welcome-message">
+        <i class="fas fa-magic"></i>
+        <h3>Welcome to FramerBot! 🚀</h3>
+        <p>Upload Framer project files or paste your query to get perfect solutions</p>
+      </div>
+    </div>
+    
+    <div class="input-container">
+      <!-- File Upload Section -->
+      <div class="upload-zone" id="uploadZone">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <h3>Upload Framer Files</h3>
+        <p>Drag & drop .framer, .json, or paste project code here</p>
+        <input type="file" id="fileInput" accept=".framer,.json,.zip,.txt" multiple hidden>
+        <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+          <i class="fas fa-folder-open"></i> Choose Files
+        </button>
+        <div class="file-list" id="fileList"></div>
+      </div>
+
+      <!-- Text Input Section -->
+      <div class="text-input-wrapper">
+        <div class="input-group">
+          <textarea 
+            id="query" 
+            placeholder="e.g. 'which type of fertilizers are to use to kill the insects...'"
+          ></textarea>
+          <button id="sendBtn" class="send-btn">
+            <i class="fas fa-sparkles"></i>
+            <span>Generate solution</span>
+            <div class="loading"></div>
+          </button>
+        </div>
+        <div class="quick-actions">
+          <button class="quick-btn" data-query="responsive navbar with hamburger menu">
+            <i class="fas fa-bars"></i> Navbar
+          </button>
+          <button class="quick-btn" data-query="hero section with animated text">
+            <i class="fas fa-star"></i> Histroy
+          </button>
+          <button class="quick-btn" data-query="pricing table with hover effects">
+            <i class="fas fa-dollar-sign"></i> rate the qulatie 
+          </button>
+          <button class="quick-btn" data-query="testimonial carousel">
+            <i class="fas fa-quote-left"></i> check the weather conditions
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
